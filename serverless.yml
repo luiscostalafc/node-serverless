@@ -22,16 +22,16 @@ functions:
   optimize:
     handler: optimize.handle
     environment:
-      bucket: serverless
+      bucket: serverlesscapicode
     events:
       - s3:
-          bucket: serverless
+          bucket: serverlesscapicode
           event: s3:ObjectCreated:*
           rules:
             - prefix: uploads/
             - suffix: .jpg
       - s3:
-          bucket: serverless
+          bucket: serverlesscapicode
           event: s3:ObjectCreated:*
           rules:
             - prefix: uploads/
